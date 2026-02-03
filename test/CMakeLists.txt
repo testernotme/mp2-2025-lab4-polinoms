@@ -4,5 +4,5 @@ set(target polinoms_test)
 file(GLOB hdrs "*.h*")
 file(GLOB srcs "*.cpp" "../src/*.cpp")
 
-add_executable(${target} ${srcs} ${hdrs})
+add_executable(${target} ${srcs} ${hdrs} "test_polinome.cpp")
 target_link_libraries(${target} gtest)
