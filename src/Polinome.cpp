@@ -51,11 +51,11 @@ std::string to_str(double dec) {
 	}
 	const double EPS = 1e-9;
 	d = db;
-	if (db - d > pow(10, -6)) {
+	if (db - d > 1e-6) {
 		db += EPS;
 		t += '.';
 		db = db - d;
-		for (size_t i = 0; db > pow(10,-6); i++)
+		for (size_t i = 0; db > 1e-6; i++)
 		{
 			t += char(int(db*=10) + '0');
 			db -= int(db);
